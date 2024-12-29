@@ -11,6 +11,15 @@ function App() {
   const [foodId, setfoodId] = useState("");
   return (
     <div className="App">
+      <Search foodData={foodData} setfoodData={setfoodData} />
+      <Container>
+        <InnerContainer>
+          <FoodList setfoodId={setfoodId} foodData={foodData} />
+        </InnerContainer>
+        <InnerContainer>
+          <FoodDetails foodId={foodId} />
+        </InnerContainer>
+      </Container>
     </div>
   );
 }
